@@ -39,7 +39,7 @@ exports.generatePdf = function(data, templatePath, extendArgs, callback) {
   extendArgs = normalized.args;
   callback   = normalized.callback;
 
-  let processArgs = [pdfPath, 'fill_form', '-', 'output', tempNameResult].concat(extendArgs);
+  let processArgs = [pdfPath, 'update_info_utf8', '-', 'output', tempNameResult].concat(extendArgs);
 
   let child = spawn('pdftk', processArgs);
 
